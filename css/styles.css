@@ -2,6 +2,7 @@ body {
     background-color: black;
 }
 
+<<<<<<< HEAD
 .img-pri{
     align: center;
     width: 1320px;
@@ -44,3 +45,8 @@ body {
     font-weight: lighter;
     opacity: .8;
 }
+=======
+.trap {
+    background-color: black;
+}
+>>>>>>> 391f3fdb0595ed9f4bf9538ec141e95cfadff6ae

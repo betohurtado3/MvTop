@@ -1,14 +1,16 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="css/styles.css">
-        <!-- CSS only -->
-        <!--Exportacion de librerias de bootrap, jQuery y ajax-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
-
-        <script>
+<center>
+    <html>
+        <head>
+            <link REL="SHORTCUT ICON" href="/Proyecto_Final/iconos/home_icon_131771.ico">
+           
+            <link rel="stylesheet" type="text/css" href="/Proyecto_Final/css/CSS.css">
+            <style type="text/css"> </style>
+            <title>Index</title>
+            <script src="js/jquery-3.3.1.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+            
+            
+       <script>
         function recibe() {
             var mail = document.forma1.correo.value;
             var contra = document.forma1.pass.value;
@@ -29,7 +31,7 @@
                     var data = new FormData(form);
 
                     $.ajax({
-                        url: 'Back/validacion.php',
+                        url: 'valida.php',
                         type: 'POST',
                         dataType: 'text',
                         data: data,
@@ -44,7 +46,7 @@
                             } 
                             else 
                             { 
-                                location.href="Front/inicio.php";   
+                                location.href="bien.php";   
                             }
                         }
                             });
@@ -52,14 +54,14 @@
                     });
                 });
             </script>
-
-
+            
         </head>
         <body>
-        <?php
-                require("Back/login.php");
+            <?php
+                require("isLogin.php");
+                
                 if($estado){
-                    header('Location: Front/inicio.php'); 
+                    header('Location: bien.php'); 
                 }else{
             ?>
             <br>
@@ -79,4 +81,5 @@
 
             </form>
         </body>
-</html>
+    </html>
+</center>

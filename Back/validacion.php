@@ -2,11 +2,10 @@
     session_start();
     require ("conexion.php");
 
-    $nickname = $_POST["Nickname"];
-    $password = $_POST["Password"];
+    $mail = $_POST["correo"];
+    $pass = $_POST["pass"];
 
-    $sql = "SELECT * FROM Usuarios WHERE Nickname = '$nickname' AND Contraseña = '$password' AND Eliminado = '0' ";
-
+    $sql = "SELECT * FROM Usuarios WHERE Nickname = '$mail' AND Contra ='$pass' AND Eliminado = '0' ";
     $res = mysqli_query($con,$sql);
     $fila = mysqli_num_rows($res);
 
@@ -17,9 +16,8 @@
 
     else{
         $row = mysqli_fetch_assoc($res);
-        $nomU = $row['Id'].' '.$row['Nickname'];
+        $nomU = $row['Nickname'];
         $_SESSION['user'] = $nomU;
         echo 1;
     }
-
-?>
+?>  

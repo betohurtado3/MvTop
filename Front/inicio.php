@@ -14,35 +14,57 @@
     <?php
         require("../Back/login.php");
         if($estado)
-        {
-    ?>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">MVTOP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Juegos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Peliculas</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-            <li class="nav-item-end">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Inicar Sesion</a>
-            </li>
-            </ul>
+        {   
+        ?>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MVTOP</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Juegos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#">Peliculas</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item-end">
+                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">
+                                <?php
+                                    if (isset($_SESSION['user'])) 
+                                    {                               
+                                        echo "".$_SESSION['user'];
+                                    }
+                                ?> 
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Back/cerrarsesion.php">Cerrar Sesion</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     <br>
+           
+
+            
+    <?php
+        }
+        else{
+             header('Location: ../index.php'); 
+            }
+        ?>
+
+
     <?php
         require "../Back/conexion.php";
         $sql="SELECT * From Noticias Where eliminado = 0";
@@ -61,14 +83,6 @@
         <?php
         }
         ?>
-    
-    <?php
-        }
-        else{
-            echo "No se pudo cargar la pagina";
-           //header('Location: ../index.php');
-        }
-    ?>
     
     </body>
 </html>

@@ -1,3 +1,9 @@
 body {
     background-color: black;
 }
+
+.img-pri{
+    align: center;
+    width: 1320px;
+    height: 350px;
+}

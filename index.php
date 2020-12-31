@@ -64,14 +64,18 @@
             ?>
             <br>
             
-            <form id="forma1" name="forma1" action="" method="POST">
-            <h2>Iniciar Sesión</h2>
-            <p>Dirección de Correo:<br>
-            <input type="text" name="correo"></p>
-            <p>Password: <br>
-            <input type="password" name="pass"></p>
-            <p class="center"><input onclick="recibe()" id="boton" class="boton" type="button" value="Iniciar Sesión"></p>
-                <?php
+            <div class="form-login">
+                <form id="forma1" name="forma1" action="" method="POST">
+                <h1>Iniciar  <a class="sesion">Sesión</a></h1>
+                <p class="titulos">Dirección de Correo:<br>
+                <input type="text" name="correo"></p>
+                <p class="titulos">Password: <br>
+                <input type="password" name="pass"></p>
+                <p class="center"><input onclick="recibe()" id="boton" class="boton" type="button" value="Iniciar Sesión"></p>
+            </div>
+                
+                 <?php
+            
                                     
                 }
             

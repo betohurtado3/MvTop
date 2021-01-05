@@ -2,7 +2,6 @@ body {
     background-color: black;
 }
 
-<<<<<<< HEAD
 .img-pri{
     align: center;
     width: 1320px;
@@ -24,29 +23,32 @@ body {
     padding: 20px 30px;
     border-top: 4px solid #5F9EA0;
     color: #566573;
+    border-radius: 10px;
 }
 
+
 .form-login h1{
-    margin-top: 0;
+    margin: 0;
     text-align: center;
     height: 40px;
     margin-bottom: 30px;
-    border-bottom: 1px solid;
-    font-size: 30px;
+    font-size: 50px;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    
-}
-
-.form-login a.sesion{
-    font-weight: 600;
-}
-
-.form-login a.iniciar{
     font-weight: lighter;
     opacity: .8;
 }
-=======
-.trap {
-    background-color: black;
+
+.controles{
+    width: 100%;
+    border: 1px solid #A2D9CE;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    border-radius: 10px;
 }
->>>>>>> 391f3fdb0595ed9f4bf9538ec141e95cfadff6ae
+
+p.titulos {
+    font-size: 14px;
+    font-weight: bold;
+    font: gray;
+    opacity: .7;
+}

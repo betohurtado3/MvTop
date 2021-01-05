@@ -66,11 +66,11 @@
             
             <div class="form-login">
                 <form id="forma1" name="forma1" action="" method="POST">
-                <h1>Iniciar  <a class="sesion">Sesión</a></h1>
+                <h1>Iniciar <strong>sesión</strong></h1>
                 <p class="titulos">Dirección de Correo:<br>
-                <input type="text" name="correo"></p>
+                <input type="text" name="controles"></p>
                 <p class="titulos">Password: <br>
-                <input type="password" name="pass"></p>
+                <input type="password" name="controles"></p>
                 <p class="center"><input onclick="recibe()" id="boton" class="boton" type="button" value="Iniciar Sesión"></p>
             </div>
                 

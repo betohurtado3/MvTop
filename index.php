@@ -7,7 +7,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
-
         <script>
         function recibe() {
             var mail = document.forma1.correo.value;
@@ -54,33 +53,35 @@
             </script>
 
 
-        </head>
-        <body>
+    </head>
+    <body>
         <?php
-                require("Back/login.php");
-                if($estado){
-                    header('Location: Front/inicio.php'); 
-                }else{
-            ?>
-            <br>
-            
-            <div class="form-login">
-                <form id="forma1" name="forma1" action="" method="POST">
-                <h1>Iniciar <strong>sesión</strong></h1>
-                <p class="titulos">Dirección de Correo:<br>
-                <input type="text" name="correo"></p>
-                <p class="titulos">Password: <br>
-                <input type="password" name="pass"></p>
-                <p class="center"><input onclick="recibe()" id="boton" class="boton" type="button" value="Iniciar Sesión"></p>
+            require("Back/login.php");  ///se busca que haya una sesion inciada
+            if($estado){
+                header('Location: Front/inicio.php');  ///Si hay una sesion se manda a inicio
+            }else{
+        ?>
+        <br>
+        <center>
+        <div class="form-login mx-auto">
+            <div class="mx-auto">
+                <h3 class="">Iniciar <strong>Sesión</strong></h3>
+                <div class="card-body">
+                    <form id="forma1" name="forma1" action="" method="POST">
+                        <p class="titulos">Nickname:<br>
+                        <input class="form-control"type="text" placeholder="Ingresa Nickname..." name="correo"></p>
+                        <p class="titulos">Password: <br>
+                        <input class="form-control" type="password" placeholder="Ingrese contraseña..." name="pass"></p>
+                        <input onclick="recibe()"  id="boton" class="btn" type="button" value="Iniciar Sesión">
+                        <br>
+                        <button type="button" id="olvide" class="btn btn-link">Olvide mi contraseña</button>
+                    </form>
+                </div>
             </div>
-                
-                 <?php
-            
-                                    
-                }
-            
-                ?>
-
-            </form>
+        </div>
+        </center>
+        <?php                        
+            }
+        ?>
         </body>
 </html>

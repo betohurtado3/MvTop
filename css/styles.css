@@ -2,19 +2,19 @@ body {
     background-color: black;
 }
 
-.img-pri{
+.img-pri {
     align: center;
     width: 1320px;
     height: 350px;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.form-login{
+.form-login {
     width: 400px;
     height: 340px;
     margin: auto;
@@ -26,8 +26,7 @@ body {
     border-radius: 10px;
 }
 
-
-.form-login h1{
+.form-login h1 {
     margin: 0;
     text-align: center;
     height: 40px;
@@ -38,7 +37,7 @@ body {
     opacity: .8;
 }
 
-.controles{
+.controles {
     width: 100%;
     border: 1px solid #A2D9CE;
     margin-bottom: 15px;
@@ -51,4 +50,13 @@ p.titulos {
     font-weight: bold;
     font: gray;
     opacity: .7;
+}
+
+#boton {
+    color: #5F9EA0;
+    border-color: #5F9EA0;
+}
+
+#olvide {
+    color: #5F9EA0;
 }

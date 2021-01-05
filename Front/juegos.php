@@ -7,6 +7,7 @@
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
 
     <body>
@@ -59,32 +60,37 @@
             }
         ?>   
         <br>
-    
-        <?php
-        require "../Back/conexion.php";
-        $sql="SELECT * From Juegos Where eliminado = 0";
-        $res = mysqli_query($con, $sql);
-        $num = mysqli_num_rows($res); ///Numero de registros
-         for($i = $num; $objeto = $res->fetch_object();$i++)
-        {
-    ?>
-        <div class="card border-primary mx-auto" style="max-width: 18rem;">
-            <div class="card-header"><?= $objeto->Titulo?></div>
-                <div class="card-body">
-                    <h4><?=$objeto->Juego?></h4>
-                    <p><?=$objeto->Descripcion?></p>
-                    <p><?=$objeto->Autor?></p>
-                    <h6 class="card-subtitle mb-2 text-muted"><?=$objeto->Fecha?></h6>
+        <div class="card mx-auto" style="max-width: 700px;">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img width="150" src="https://sm.ign.com/ign_latam/game/t/the-legend/the-legend-of-zelda-breath-of-the-wild_z2sc.jpg" alt="...">
                 </div>
-            <div class="card-footer input-group mb-3">
-                <input type="text" class="form-control" placeholder="Comenta algo..." aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Escribir</button>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">The Legend Of Zelda: Breath Of The Wild</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    20 <button type="button" class="btn btn-outline-primary btn-sm">Like</button>
+                    5 <button type="button" class="btn btn-outline-danger btn-sm">Dislike</button>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
-        <?php
-        }
-        ?>
+        <div class="card mx-auto" style="max-width: 700px;">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img width="150" src="https://as01.epimg.net/meristation/imagenes/2019/08/20/cover/364320561566326940.jpg" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">Gears Of War 5</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <br>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>

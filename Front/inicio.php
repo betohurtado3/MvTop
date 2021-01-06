@@ -18,20 +18,20 @@
         ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="inicio.php">MVTOP</a>
+                <a class="navbar-brand mx-5" href="inicio.php">MVTOP</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active mx-3" aria-current="page" href="#">Inicio</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="juegos.php">Juegos</a>
+                            <a class="nav-link mx-3" href="juegos.php">Juegos</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="peliculas.php">Peliculas</a>
+                            <a class="nav-link mx-3" href="peliculas.php">Peliculas</a>
                         </li>
                     </ul>
                 </div>
@@ -48,7 +48,7 @@
                             </a>
                         </li>
                         <li class="nav-item navbar-right">
-                            <a class="nav-link"  href="../Back/cerrarsesion.php">Salir</a>
+                            <a class="nav-link mx-5"  href="../Back/cerrarsesion.php">Salir</a>
                         </li>
                     </ul>
 

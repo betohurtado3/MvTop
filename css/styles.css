@@ -60,3 +60,7 @@ p.titulos {
 #olvide {
     color: #5F9EA0;
 }
+
+.navbar {
+    color: #5F9EA0 !important;
+}

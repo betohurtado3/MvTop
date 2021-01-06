@@ -60,39 +60,36 @@
             }
         ?>   
         <br>
-        <div class="mx-auto" style="max-width: 700px;">
-            <a class="btn btn-outline-success btn-lg" href="form-juegos.php">Crear Nota</a>
-        </div>
-        <br>
-        <?php
-            require "../Back/conexion.php";
-            $sql = "SELECT * FROM Juegos Where Eliminado = 0 ";
-            $res = mysqli_query($con, $sql);
-            $num = mysqli_num_rows($res);
-
-            for($i = $num; $objeto = $res->fetch_object() ; $i++)
-            {
-        ?>
-        <div class="card mx-auto" style="max-width: 700px;">
+        <div class="mx-auto" style="max-width: 300px;">
             <div class="row g-0">
-                <div class="col-md-3">
-                    <img height="210" width="150" src="https://sm.ign.com/ign_latam/game/t/the-legend/the-legend-of-zelda-breath-of-the-wild_z2sc.jpg" alt="...">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Titulo">
+                    <label for="exampleFormControlInput1" class="form-label">Juego</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Juego">
+                    <label for="exampleFormControlInput1" class="form-label">Descripción</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Descripción">
                 </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title"><?= $objeto->Titulo?></h5>
-                        <p class="card-text"><?= $objeto->Descripcion?></p>
-                        <p class="card-text"><?= $objeto->Autor?></p>
-                        <p class="card-text"><small class="text-muted"><?= $objeto->Fecha?></small></p>
-                    </div>
-                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Texto</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <br>
+                    <label for="exampleFormControlTextarea1" class="form-label">Autor:</label>
+                    <input class="form-control" type="text" placeholder="                        
+                            <?php
+                            if (isset($_SESSION['user'])) 
+                            {                               
+                                echo "".$_SESSION['user'];
+                            }
+                            ?> 
+                            " aria-label="Disabled input example" disabled>
+               </div>
             </div>
         </div>
-        <br>
 
-        <?php
-            }
-        ?>
+        <div class="mx-auto" style="max-width: 300px;">
+            <a class="btn btn-outline-danger btn-lg" href="juegos.php">Regresar</a>
+        </div>
 
     </body>
 </html>

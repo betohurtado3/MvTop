@@ -75,20 +75,17 @@
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     <br>
                     <label for="exampleFormControlTextarea1" class="form-label">Autor:</label>
-                    <input class="form-control" type="text" placeholder="                        
-                            <?php
+                    <input class="form-control" type="text" placeholder="<?php
                             if (isset($_SESSION['user'])) 
                             {                               
                                 echo "".$_SESSION['user'];
                             }
-                            ?> 
-                            " aria-label="Disabled input example" disabled>
+                            ?>" aria-label="Disabled input example" disabled>
                </div>
+               <a class="btn btn-outline-success btn-lg" href="form-juegos.php">Crear Nota</a>
+               <br>
+               <a class="btn btn-outline-danger btn-lg" href="form-juegos.php">Regresar</a>
             </div>
-        </div>
-
-        <div class="mx-auto" style="max-width: 300px;">
-            <a class="btn btn-outline-danger btn-lg" href="juegos.php">Regresar</a>
         </div>
 
     </body>

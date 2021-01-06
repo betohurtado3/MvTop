@@ -17,26 +17,14 @@
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="inicio.php">Inicio</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="juegos.php">Juegos</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="peliculas.php">Peliculas</a>
-                </li>
-            </ul>
             <ul class="navbar-nav ml-auto">
             <li class="nav-item-end">
-                <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Inicar Sesion</a>
+                <a class="nav-link " href="index.php" tabindex="-1" aria-disabled="true">Inicar Sesion</a>
             </li>
             </ul>
             </div>
         </div>
     </nav>
-    <center>
-    <img src="../img/coraline.jpg" class="img-pri" alt="coraline"></center>    
+      
 </body>
 </html>

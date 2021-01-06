@@ -16,7 +16,7 @@ body {
 
 .form-login {
     width: 400px;
-    height: 340px;
+    height: 400px;
     margin: auto;
     margin-top: 180px;
     box-shadow: 7px 13px 37px #000000;
@@ -34,7 +34,7 @@ body {
     font-size: 50px;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     font-weight: lighter;
-    opacity: .8;
+    opacity: .5;
 }
 
 .controles {
@@ -55,6 +55,12 @@ p.titulos {
 #boton {
     color: #5F9EA0;
     border-color: #5F9EA0;
+}
+
+#botoncrear{
+    color: white;
+    border-color: #5F9EA0;
+    background-color: #5F9EA0;;
 }
 
 #olvide {
